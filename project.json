@@ -1,0 +1,8 @@
+{
+  "slug": "dead-letter-queue",
+  "title": "Dead-letter queue",
+  "description": "Bound retries and move repeatedly failed jobs into a reviewable dead-letter state.",
+  "category": "systems",
+  "demo_args": [],
+  "expected_exit": 0
+}
