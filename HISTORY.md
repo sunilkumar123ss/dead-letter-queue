@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 2 of 14. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 3 of 14. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -14,7 +14,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | --- | --- | --- |
 | 1 | 2023-04-04T17:33:18+05:30 | add repository metadata and Python ignore rules (present) |
 | 2 | 2023-06-27T18:42:19+05:30 | add module imports, constants, and scope documentation (present) |
-| 3 | 2023-12-10T19:15:10+05:30 | validate queue clock observations (later stage) |
+| 3 | 2023-12-10T19:15:10+05:30 | validate queue clock observations (present) |
 | 4 | 2023-12-11T12:36:13+05:30 | implement retry scheduling, acknowledgments, and dead-letter redrive (later stage) |
 | 5 | 2024-01-03T10:05:17+05:30 | add the deterministic demonstration and command-line entry point (later stage) |
 | 6 | 2024-02-14T14:17:46+05:30 | test ack prevents redelivery (later stage) |
