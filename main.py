@@ -63,3 +63,15 @@ class Queue:
             raise ValueError('Only dead-letter jobs can be redriven')
         self.advance(now)
         self.jobs[key].update(state='pending', attempts=0, available=now, error=None)
+
+def demo():
+    q = Queue(max_attempts=2)
+    q.enqueue('synthetic-job', {'task': 'index'})
+    q.claim(0)
+    q.fail('synthetic-job', 'synthetic timeout', 0)
+    q.claim(1)
+    q.fail('synthetic-job', 'synthetic timeout', 1)
+    return q.jobs
+if __name__ == '__main__':
+    argparse.ArgumentParser(description=__doc__).parse_args()
+    print(json.dumps(demo(), indent=2))
