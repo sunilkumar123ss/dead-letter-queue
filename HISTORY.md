@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 5 of 14. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 6 of 14. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -17,7 +17,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 3 | 2023-12-10T19:15:10+05:30 | validate queue clock observations (present) |
 | 4 | 2023-12-11T12:36:13+05:30 | implement retry scheduling, acknowledgments, and dead-letter redrive (present) |
 | 5 | 2024-01-03T10:05:17+05:30 | add the deterministic demonstration and command-line entry point (present) |
-| 6 | 2024-02-14T14:17:46+05:30 | test ack prevents redelivery (later stage) |
+| 6 | 2024-02-14T14:17:46+05:30 | test ack prevents redelivery (present) |
 | 7 | 2025-01-07T15:03:57+05:30 | test delay is respected (later stage) |
 | 8 | 2025-05-05T16:53:30+05:30 | test attempt limit (later stage) |
 | 9 | 2025-07-21T16:38:17+05:30 | test redrive starts new cycle (later stage) |
