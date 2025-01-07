@@ -16,6 +16,13 @@ class DeadLetterTests(unittest.TestCase):
         q.ack('a')
         self.assertIsNone(q.claim(100))
 
+    def test_delay_is_respected(self):
+        q = m.Queue()
+        q.enqueue('a', {})
+        q.claim(0)
+        q.fail('a', 'x', 0)
+        self.assertIsNone(q.claim(0.9))
+        self.assertEqual(q.claim(1)['attempt'], 2)
 
 
 
