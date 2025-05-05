@@ -24,6 +24,13 @@ class DeadLetterTests(unittest.TestCase):
         self.assertIsNone(q.claim(0.9))
         self.assertEqual(q.claim(1)['attempt'], 2)
 
+    def test_attempt_limit(self):
+        q = m.Queue(max_attempts=1)
+        q.enqueue('a', {})
+        q.claim(0)
+        q.fail('a', 'x', 0)
+        self.assertEqual(q.jobs['a']['state'], 'dead')
+        self.assertIsNone(q.claim(20))
 
 
 
