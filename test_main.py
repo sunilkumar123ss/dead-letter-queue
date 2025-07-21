@@ -32,6 +32,13 @@ class DeadLetterTests(unittest.TestCase):
         self.assertEqual(q.jobs['a']['state'], 'dead')
         self.assertIsNone(q.claim(20))
 
+    def test_redrive_starts_new_cycle(self):
+        q = m.Queue(max_attempts=1)
+        q.enqueue('a', {})
+        q.claim(0)
+        q.fail('a', 'x', 0)
+        q.redrive('a', 2)
+        self.assertEqual(q.claim(2)['attempt'], 1)
 
 
 if __name__ == '__main__':
