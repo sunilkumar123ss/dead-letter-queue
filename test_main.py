@@ -40,6 +40,16 @@ class DeadLetterTests(unittest.TestCase):
         q.redrive('a', 2)
         self.assertEqual(q.claim(2)['attempt'], 1)
 
+    def test_state_and_clock_guards(self):
+        q = m.Queue()
+        q.enqueue('a', {})
+        with self.assertRaises(ValueError):
+            q.ack('a')
+        q.claim(5)
+        with self.assertRaises(ValueError):
+            q.claim(4)
+        with self.assertRaises(ValueError):
+            q.redrive('a', 6)
 
 if __name__ == '__main__':
     unittest.main()

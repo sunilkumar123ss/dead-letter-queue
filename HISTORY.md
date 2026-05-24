@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 9 of 14. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 10 of 14. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -21,7 +21,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 7 | 2025-01-07T15:03:57+05:30 | test delay is respected (present) |
 | 8 | 2025-05-05T16:53:30+05:30 | test attempt limit (present) |
 | 9 | 2025-07-21T16:38:17+05:30 | test redrive starts new cycle (present) |
-| 10 | 2026-05-24T09:06:27+05:30 | test state and clock guards (later stage) |
+| 10 | 2026-05-24T09:06:27+05:30 | test state and clock guards (present) |
 | 11 | 2026-05-26T09:29:05+05:30 | test fifo skips delayed (later stage) |
 | 12 | 2026-05-28T17:21:34+05:30 | add isolated tests, demo, and help verification (later stage) |
 | 13 | 2026-08-29T19:00:13+05:30 | add the hosted Python verification workflow (later stage) |
