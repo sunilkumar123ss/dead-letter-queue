@@ -51,5 +51,12 @@ class DeadLetterTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             q.redrive('a', 6)
 
+    def test_fifo_skips_delayed(self):
+        q = m.Queue()
+        q.enqueue('a', {})
+        q.enqueue('b', {})
+        q.claim(0)
+        q.fail('a', 'x', 0)
+        self.assertEqual(q.claim(0)['id'], 'b')
 if __name__ == '__main__':
     unittest.main()
